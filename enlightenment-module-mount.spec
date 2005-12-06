@@ -1,7 +1,7 @@
-#
 %define		_module_name	mount
 
-Summary:	Enlightenment DR17 module: %{_module_name}
+Summary:	Enlightenment DR17 module: mount
+Summary(pl):	Modu³ Enlightenmenta DR17: mount
 Name:		enlightenment-module-%{_module_name}
 Version:	0.0.6
 Release:	1
@@ -17,8 +17,12 @@ Requires:	enlightenmentDR17
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Enlightenment DR17 module: %{_module_name}. This module makes easy
-mounting file systems with "user" option in /etc/fstab.
+mount module for Enlightenment DR17 makes easy mounting file systems
+with "user" option in /etc/fstab.
+
+%description -l pl
+Modu³ mount dla Enlightenmenta DR17 u³atwia montowanie systemów plików
+z opcj± "user" w /etc/fstab.
 
 %prep
 %setup -q -n %{_module_name}
