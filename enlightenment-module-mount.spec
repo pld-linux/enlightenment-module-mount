@@ -10,8 +10,11 @@ Group:		X11/Window Managers/Tools
 Source0:	http://www.get-e.org/Resources/Modules/_files/%{_module_name}-%{version}.tar.gz
 # Source0-md5:	c9860d2dd415746487f181250e44539e
 URL:		http://www.get-e.org/Resources/Modules/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	edje
 BuildRequires:	enlightenmentDR17-devel
+BuildRequires:	libtool
 BuildRequires:	sed >= 4.0
 Requires:	enlightenmentDR17
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
