@@ -3,12 +3,12 @@
 Summary:	Enlightenment DR17 module: mount
 Summary(pl):	Modu³ Enlightenmenta DR17: mount
 Name:		enlightenment-module-%{_module_name}
-Version:	0.0.6
+Version:	0.0.7
 Release:	1
 License:	BSD
 Group:		X11/Window Managers/Tools
 Source0:	http://www.get-e.org/Resources/Modules/_files/%{_module_name}-%{version}.tar.gz
-# Source0-md5:	c9860d2dd415746487f181250e44539e
+# Source0-md5:	89d0ae268c1637cc7b209f89c1e03902
 URL:		http://www.get-e.org/Resources/Modules/
 BuildRequires:	autoconf
 BuildRequires:	automake
