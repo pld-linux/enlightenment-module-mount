@@ -1,0 +1,11 @@
+--- mount/e_mod_main.c~	2005-12-18 16:17:00.000000000 +0100
++++ mount/e_mod_main.c	2006-02-06 18:18:14.000000000 +0100
+@@ -234,7 +234,7 @@
+ 		  point->part = strdup("camera");
+ 		  point->eject_mode = MANUAL_EJECT;
+ 	       }
+-	     else if (strstr(point->path, "smb"))
++	     else if (strstr(point->path, "smb") || strcmp(info[2], "nfs") == 0)
+ 	       {
+ 		  point->part = strdup("network");
+ 		  point->eject_mode = MANUAL_EJECT;
