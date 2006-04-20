@@ -1,14 +1,15 @@
 %define		_module_name	mount
-
+%define		_snap	20060419
 Summary:	Enlightenment DR17 module: mount
 Summary(pl):	Modu³ Enlightenmenta DR17: mount
 Name:		enlightenment-module-%{_module_name}
 Version:	0.0.7
-Release:	1
+Release:	0.%{_snap}_1
 License:	BSD
 Group:		X11/Window Managers/Tools
-Source0:	http://www.get-e.org/Resources/Modules/_files/%{_module_name}-%{version}.tar.gz
-# Source0-md5:	89d0ae268c1637cc7b209f89c1e03902
+#Source0:	http://www.get-e.org/Resources/Modules/_files/%{_module_name}-%{version}.tar.gz
+Source0:	http://sparky.homelinux.org/snaps/enli/e_modules/%{_module_name}-%{_snap}.tar.bz2
+# Source0-md5:	1ea6c7e90ac62b84605755692b58411d
 URL:		http://www.get-e.org/Resources/Modules/
 Patch0:		%{name}-nfs.patch
 BuildRequires:	autoconf
@@ -18,6 +19,7 @@ BuildRequires:	enlightenmentDR17-devel
 BuildRequires:	libtool
 BuildRequires:	sed >= 4.0
 Requires:	enlightenmentDR17
+Requires:	fonts-TTF-bitstream-vera
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -54,15 +56,21 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+ln -sf %{_datadir}/fonts/TTF/VeraBd.ttf \
+	$RPM_BUILD_ROOT%{_libdir}/enlightenment/modules_extra/%{_module_name}/VeraBd.ttf
+
+%find_lang mount
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f mount.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %dir %{_libdir}/enlightenment/modules_extra/%{_module_name}
 %dir %{_libdir}/enlightenment/modules_extra/%{_module_name}/linux-gnu-*
 %attr(755,root,root) %{_libdir}/enlightenment/modules_extra/%{_module_name}/linux-gnu-*/module.so
 # violates FHS
+%{_libdir}/enlightenment/modules_extra/%{_module_name}/VeraBd.ttf
 %{_libdir}/enlightenment/modules_extra/%{_module_name}/%{_module_name}.*
-%{_libdir}/enlightenment/modules_extra/%{_module_name}/module_icon.png
+%{_libdir}/enlightenment/modules_extra/%{_module_name}/*.png
