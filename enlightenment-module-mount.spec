@@ -1,7 +1,7 @@
 %define		_module_name	mount
 %define		_snap	20060419
 Summary:	Enlightenment DR17 module: mount
-Summary(pl):	Modu≥ Enlightenmenta DR17: mount
+Summary(pl.UTF-8):   Modu≈Ç Enlightenmenta DR17: mount
 Name:		enlightenment-module-%{_module_name}
 Version:	0.0.7
 Release:	0.%{_snap}_1
@@ -26,9 +26,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 mount module for Enlightenment DR17 makes easy mounting file systems
 with "user" option in /etc/fstab.
 
-%description -l pl
-Modu≥ mount dla Enlightenmenta DR17 u≥atwia montowanie systemÛw plikÛw
-z opcj± "user" w /etc/fstab.
+%description -l pl.UTF-8
+Modu≈Ç mount dla Enlightenmenta DR17 u≈Çatwia montowanie system√≥w plik√≥w
+z opcjƒÖ "user" w /etc/fstab.
 
 %prep
 %setup -q -n %{_module_name}
