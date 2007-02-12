@@ -1,7 +1,7 @@
 %define		_module_name	mount
 %define		_snap	20060419
 Summary:	Enlightenment DR17 module: mount
-Summary(pl.UTF-8):   Moduł Enlightenmenta DR17: mount
+Summary(pl.UTF-8):	Moduł Enlightenmenta DR17: mount
 Name:		enlightenment-module-%{_module_name}
 Version:	0.0.7
 Release:	0.%{_snap}_1
