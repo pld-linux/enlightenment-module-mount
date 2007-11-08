@@ -15,10 +15,10 @@ Patch0:		%{name}-nfs.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	edje
-BuildRequires:	enlightenmentDR17-devel
+BuildRequires:	enlightenment-devel
 BuildRequires:	libtool
 BuildRequires:	sed >= 4.0
-Requires:	enlightenmentDR17
+Requires:	enlightenment
 Requires:	fonts-TTF-bitstream-vera
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
